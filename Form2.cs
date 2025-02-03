@@ -40,7 +40,21 @@ namespace ahhhcreatee
             if (verificar1 && verificar2)
             {
                 double IMC = peso / (altura * altura);
-                MostrarMensaje($"Su indice de masa corporal es: {IMC}", Color.Green);
+                if(IMC < 18.5) { 
+                    MostrarMensaje($"Su indice de masa corporal es: {IMC} Tienes un peso bajo.", Color.Green);
+                }
+                else if(18.5 <= IMC || IMC <= 24.9)
+                {
+                    MostrarMensaje($"Su indice de masa corporal es: {IMC} Tienes un peso normal.", Color.Green);
+                }
+                else if (25 <= IMC || IMC <= 29.99)
+                {
+                    MostrarMensaje($"Su indice de masa corporal es: {IMC} Tienes sobrepeso.", Color.Green);
+                }
+                else if (30 <= IMC)
+                {
+                    MostrarMensaje($"Su indice de masa corporal es: {IMC} Tienes obesidad.", Color.Green);
+                }
             }
             else
             {
